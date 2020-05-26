@@ -20,6 +20,8 @@ nav a{
 }
 main{
 	flex: 1;
+	height: 100vh;
+	overflow-y: scroll;
 }
 header{
 	font-size: 25px;

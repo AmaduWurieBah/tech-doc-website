@@ -11,6 +11,11 @@ nav{
 	max-width: 300px;
 	height: 100vh;
 }
+
+nav header{
+	padding: 15px;
+}
+
 nav a{
 	border: 2px solid #777;
 	color: #000;
@@ -23,8 +28,13 @@ main{
 	height: 100vh;
 	overflow-y: scroll;
 }
+
+section{
+	padding: 20px;
+	line-height: 1.5;
+}
+
 header{
 	font-size: 25px;
-	font-weight: 600;
-	padding: 15px;
+	font-weight: 600;	
 }

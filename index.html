@@ -34,9 +34,6 @@
             <h1>Discription of HTML 5 Tags</h1>
 
             <p>If you know a little about HTML you will know that HTML tags are (mostly) used to format content - these tags tell the browser how to display the content on the page. They give no indication as to what type of content they contain or what role that content plays in the page. Semantic HTML5 addresses this shortcoming by defining specific tags to indicate clearly what role is played by the content those tags contain.  That explicit information helps robots/crawlers like Google and Bing to better understand which content is important, which is a subsidiary, which is for navigation, and so on. By adding semantic HTML tags to your pages, you provide additional information that helps Google and Bing understand the roles and relative importance of the different parts of your page.</p>
-
-
-
          </section>
            <section class="main-section" id="Topics_and_Sub_Topics">
          	<header>Topics and Sub Topics</header>
@@ -78,7 +75,7 @@
             </ul>
 
             <h1>Sematic HTML Five Tags</h1>
-            <p>Semantic HTML elements are those that clearly describe their meaning in a human- and machine-readable way. Elements such as <header>, <footer> and <article> are all considered semantic because they accurately describe the purpose of the element and the type of content that is inside them.</p>
+            <p>Semantic HTML elements are those that clearly describe their meaning in a human- and machine-readable way. Elements such as header, footer and article are all considered semantic because they accurately describe the purpose of the element and the type of content that is inside them.</p>
                 <ul>
                     <li>Article</li>
                     <li>Aside</li>
@@ -105,7 +102,62 @@
          </section>
            <section class="main-section" id="CSS_Box_Model">
          	<header>CSS Box Model</header>
-         	
+         	<h3>CSS Box model</h3>
+            <p>Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS Box Model so that you can build more complex layout tasks with an understanding of how it works and the terminology that relates to it.</p>
+            <h3>What is the CSS box model?</h3>
+            <p>The full CSS box model applies to block boxes, inline boxes only use some of the behavior defined in the box model. The model defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on the page. To add some additional complexity, there is a standard and an alternate box model.</p>
+
+               <ul>
+                    <li>Margin Area: This area consists of space between border and margin. The dimensions of Margin area are the margin-box width and the margin-box height. It is useful to separate the element from its neighbors</li>
+                    <li>Padding Area: It includes the element’s padding. This area is actually the space around the content area and within the border box. Its dimensions are given by the width of the padding-box and the height of the padding-box.</li>
+                    <li>Border Area: It is the area between the box’s padding and margin. Its dimensions are given by the width and height of border</li>
+                    <li>Content Area: This area consists of content like text, image, or other media content. It is bounded by the content edge and its dimensions are given by content box width and height.</li>
+                </ul>
+
+                <h3>Block and inline boxes</h3>
+                 <p>In CSS we broadly have two types of boxes — block boxes and inline boxes. These characteristics refer to how the box behaves in terms of page flow, and in relation to other boxes on the page:<br>
+                 If a box is defined as a block, it will behave in the following ways:</p>
+                  <ul>
+                    <li>The box will break onto a new line.</li>
+                    <li>The box will extend in the inline direction to fill the space available in its container. In most. cases this means that the box will become as wide as its container, filling up 100% of the space available</li>
+                    <li>The width and height properties are respected.</li>
+                    <li>Padding, margin and border will cause other elements to be pushed away from the box</li>
+                </ul>
+                 
+                 <p>Unless we decide to change the display type to inline, elements such as headings (e.g.(h1) and (p) all use block as their outer display type by default.</p>
+                    <h4>If a box has an outer display type of inline, then:</h4>
+                    <ul>
+                    <li>  The box will not break onto a new line.</li>
+                    <li>The width and height properties will not apply.</li>
+                    <li>Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
+                    <li>Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
+                </ul>
+               <h3>Aside: Inner and outer display types</h3>
+               <p>At this point, we'd better also explain inner and outer display types. As mentioned above, boxes in CSS have an outer display type, which details whether the box is block or inline.<br><br>
+
+                Boxes also have an inner display type, however, which dictates how elements inside that box are laid out. By default, the elements inside a box are laid out in normal flow, which means that they behave just like any other block and inline elements (as explained above).<br><br>
+
+                We can, however, change the inner display type by using display values like flex. If we set display: flex; on an element, the outer display type is block, but the inner display type is changed to flex. Any direct children of this box will become flex items and will be laid out according to the rules set out in the Flexbox spec, which you'll learn about later on.<br><br>
+                When you move on to learn about CSS Layout in more detail, you will encounter flex, and various other inner values that your boxes can have, for example grid.<br><br>
+
+               Block and inline layout, however, is the default way that things on the web behave — as we said above, it is sometimes referred to as normal flow, because without any other instruction, our boxes lay out as block or inline boxes.</p>
+             <h3>Examples of different display types</h3>
+             <p>Let's move on and have a look at some examples. Below we have three different HTML elements, all of which have an outer display type of block. The first is a paragraph, which has a border added in CSS. The browser renders this as a block box, so the paragraph begins on a new line, and expands to the full width available to it.<br><br>
+
+             The second is a list, which is laid out using display: flex. This establishes flex layout for the items inside the container, however, the list itself is a block box and — like the paragraph — expands to the full container width and breaks onto a new line.<br><br>
+
+              Below this, we have a block-level paragraph, inside which are two (span) elements. These elements would normally be inline, however, one of the elements has a class of block, and we have set it to display: block.<br><br>
+
+              We can see how inline elements behave in this next example. The (span) elements in the first paragraph are inline by default and so do not force line breaks.<br><br>
+
+             We also have a (ul) element which is set to display: inline-flex, creating an inline box around some flex items.<br><br>
+
+             Finally, we have two paragraphs both set to display: inline. The inline flex container and paragraphs all run together on one line rather than breaking onto new lines as they would do if they were displaying as block-level elements.<br><br>
+
+            In the example, you can change display: inline to display: block or display: inline-flex to display: flex to toggle between these display modes.<br><br>
+
+            You will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the display property can change whether the outer display type of a box is block or inline, which changes the way it displays alongside other elements in the layout. <br><br>
+        </p>
          </section>
            <section class="main-section" id="HTML_5_Tags">
          	<header>HTML 5 Tags</header>

@@ -22,16 +22,16 @@
          <section class="main-section" id="Discription_and_Goals">
          	<header>Discription and Goals</header>
 
-            <h1>Description of Flex Box Module</h1>
+            <h3>Description of Flex Box Module</h3>
 
             <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, and as a method that could offer space distribution between items in an interface and powerful alignment capabilities. This article gives an outline of the main features of flexbox, which we will be exploring in more detail in the rest of these guides.
             When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with layout in one dimension at a time — either as a row or as a column. This can be contrasted with the two-dimensional model of CSS Grid Layout, which controls columns and rows together.</p>
 
-            <h1>Description of Box Modle Module</h1>
+            <h3>Description of Box Modle Module</h3>
 
             <p>This specification describes the margin and padding properties, which create spacing in and around a CSS box.CSS is a language for describing the rendering of structured documents (such as HTML and XML) on screen, on paper, etc. </p>
 
-            <h1>Discription of HTML 5 Tags</h1>
+            <h3>Discription of HTML 5 Tags</h3>
 
             <p>If you know a little about HTML you will know that HTML tags are (mostly) used to format content - these tags tell the browser how to display the content on the page. They give no indication as to what type of content they contain or what role that content plays in the page. Semantic HTML5 addresses this shortcoming by defining specific tags to indicate clearly what role is played by the content those tags contain.  That explicit information helps robots/crawlers like Google and Bing to better understand which content is important, which is a subsidiary, which is for navigation, and so on. By adding semantic HTML tags to your pages, you provide additional information that helps Google and Bing understand the roles and relative importance of the different parts of your page.</p>
 
@@ -44,11 +44,47 @@
          </section>
            <section class="main-section" id="Flexbox_Container_Properties">
          	<header>FlexBox Container Properties</header>
-         	
+
+            <h3>The flex-direction Property</h3>
+            <p>The flex-direction property is a sub-property of the Flexible Box Layout module. It establishes the main-axis, thus defining the direction flex items are placed in the flex container. Reminder: the main axis of a flex container is the primary axis along which flex items are laid out</p>
+
+            <h3>flex-wrap</h3>
+            <p>The flex-wrap property is a sub-property of the Flexible Box Layout module. It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.</p>
+
+            <h3>Flex-flow</h3>
+            <p>The flex-flow property is a sub-property of the Flexible Box Layout module. It is a shorthand for flex-direction and flex-wrap</p>
+
+            <h3>Justify-Content</h3>
+            <p>The justify-content property is a sub-property of the Flexible Box Layout module. It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.</p>
+
+            <h3>Align-Item</h3>
+            <p>The align-items property defines the default behavior for how items are laid out along the cross axis (perpendicular to the main axis). Imagine a horizontal flexbox layout. That horizontal flow is the main axis, so align-items is the alignment opposite that, on the vertical axis</p>
+
+            <h3>Align-Content</h3>
+            <p>It defines how each line is aligned within a flexbox/grid container. It only applies if flex-wrap: wrap is present, and if there are multiple lines of flexbox/grid items. default align-content: stretch; Each line will stretch to fill the remaining space.</p>
+
          </section>
            <section class="main-section" id="Flexbox_Child_Element_Properies">
          	<header>FlexBox Child Element Properties</header>
-         	
+
+            <h3>Order</h3>
+            <p>The first flex item in the code does not have to appear as the first item in the layout. The order value must be a number, default value is 0.</p>
+
+            <h3>Flex-grow</h3>
+            <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+
+            <h3>Flex-shrink</h3>
+            <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+
+            <h3>Flex-basis</h3>
+           <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+
+           <h3>Flex</h3>
+         	<p>The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</p>
+
+            <h3>Align-self</h3>
+            <p>The align-self CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.</p>
+
          </section>
            <section class="main-section" id="CSS_Box_Model">
          	<header>CSS Box Model</header>
@@ -56,6 +92,49 @@
          </section>
            <section class="main-section" id="HTML_5_Tags">
          	<header>HTML 5 Tags</header>
+            <h3>Html tags</h3>
+            <p>HTML tags are the hidden keywords within a web page that define how your web browser must format and display the content.</p>
+
+            <h3>The Html Article Element</h3>
+            <P>The HTML article element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry.</P>
+
+            <h3>The Html aside Element</h3>
+            <p>The HTML aside element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.</p>
+
+            <h3>The Html details Element</h3>
+            <p>The details tag specifies additional details that the user can open and close on demand. The details tag is often used to create an interactive widget that the user can open and close. By default, the widget is closed. When open, it expands, and displays the content within.</p>
+
+            <h3>The Html figcaption Element</h3>
+            <p>The HTML figcaption or Figure Caption element represents a caption or legend describing the rest of the contents of its parent figure element.</p>
+
+            <h3>The Html figure Element</h3>
+            <p>When writing in HTML, the figure tag is a block element used to designate an area of self-contained content that does not affect the main flow of the article. It is useful with items like diagrams, illustrations, images, and sections of computer code.</p>
+
+            <h3>The Html footer Element</h3>
+            <p>The HTML footer element represents a footer for its nearest sectioning content or sectioning root element. A footer typically contains information about the author of the section, copyright data or links to related documents.</p>
+
+            <h3>The Html header Element</h3>
+            <p>The header element represents a container for introductory content or a set of navigational links.</p>
+
+            <h3>The Html main Element</h3>
+            <p>The HTML main element represents the dominant content of the body of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application</p>
+
+            <h3>The Html mark Element</h3>
+            <p>The HTML mark tag is used to mark or highlight text that is of special interest or relevance in an HTML document. Browsers traditionally render the text found within the mark tag as text with a yellow background color. This tag is also commonly referred to as the mark element.</p>
+
+            <h3>The Html nav Element</h3>
+            <p>The HTML nav element represents a section of a page whose purpose is to provide navigation links, either within the current document or to other documents. Common examples of navigation sections are menus, tables of contents, and indexes.</p>
+
+            <h3>The Html section Element</h3>
+            <p>The HTML section element represents a generic section of a document, i.e., a thematic grouping of content, typically with a heading.</p>
+
+            <h3>The Html summary Elemnet</h3>
+            <p>The summary tag defines a visible heading for the details element. The heading can be clicked to view/hide the details.</p>
+
+            <h3>The Html time Element</h3>
+            <p>The HTML time element represents a specific period in time. It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders. It may represent one of the following: A time on a 24-hour clock.</p>
+
+
          	
          </section>
     </main>

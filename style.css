@@ -25,6 +25,8 @@ nav a{
 }
 main{
 	flex: 1;
+	overflow-y: scroll;
+	height: 100vh;
 }
 
 section{

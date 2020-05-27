@@ -8,8 +8,9 @@
     
 </head>
 <body>
-    <nav class="navbar">
-    	<header>Technical Documentation Page for Flexbox, CSS Box Model and HTML 5 Tags</header>
+	<!-- Navbar start here-->
+    <nav id="navbar">
+    	<header id="header-name">Detail Notes on Flexbox, CSS Box Model and HTML 5 Tags</header>
     	<a href=#Discription_and_Goals class="nav-link">Discription and Goals</a>
     	<a href=#Topics_and_Sub_Topics class="nav-link">Topics and Sub Topics</a>
     	<a href=#Flexbox_Container_Properties class="nav-link">FlexBox Container Properties</a>
@@ -17,8 +18,10 @@
     	<a href=#CSS_Box_Model class="nav-link">CSS Box Model</a>
     	<a href=#HTML_5_Tags class="nav-link">HTML 5 Tags</a>
     </nav>
+<!-- Navbar end here-->
 
     <main id="main-doc">
+    	<!--Main Section for Discription and Goals-->
          <section class="main-section" id="Discription_and_Goals">
          	<header>Discription and Goals</header>
 
@@ -92,49 +95,322 @@
                     <li>Time</li>
                 </ul>
          </section>
+          <!-- Main Section for For FlexBox Container Properties-->
            <section class="main-section" id="Flexbox_Container_Properties">
          	<header>FlexBox Container Properties</header>
 
-            <h3>The flex-direction Property</h3>
+            <h1>The flex-direction Property</h1>
             <p>The flex-direction property is a sub-property of the Flexible Box Layout module. It establishes the main-axis, thus defining the direction flex items are placed in the flex container. Reminder: the main axis of a flex container is the primary axis along which flex items are laid out</p>
-
-            <h3>flex-wrap</h3>
+            <h1>The flex-direction Property</h1>
+            <p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom):</p>
+            <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>  
+            </div>
+           <h1>CSS Code for Flex-Container Property</h1>
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
+            <h1>Flex-wrap</h1>
             <p>The flex-wrap property is a sub-property of the Flexible Box Layout module. It defines whether the flex items are forced in a single line or can be flowed into multiple lines. If set to multiple lines, it also defines the cross-axis which determines the direction new lines are stacked in.</p>
+            <h1>The flex-wrap Property</h1>
+                <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary:</p>
+                <div class="flex-wrap">
+                  <div>1</div>
+                  <div>2</div>
+                  <div>3</div>  
+                  <div>4</div>
+                  <div>5</div>
+                  <div>6</div>  
+                  <div>7</div>
+                  <div>8</div>
+                  <div>9</div>  
+                  <div>10</div>
+                  <div>11</div>
+                  <div>12</div>  
+                </div>
+            <p>Try resizing the browser window.</p>
+          <h1>The flex-wrap Property</h1>
+            <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary:</p>
+             <pre>
+               <code>&lt;style&gt;
+                   .flex-wrap {
+                      display: flex;
+                      flex-wrap: wrap;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-wrap > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                &lt;/style&gt;
+               </code>
+           </pre>
 
             <h3>Flex-flow</h3>
             <p>The flex-flow property is a sub-property of the Flexible Box Layout module. It is a shorthand for flex-direction and flex-wrap</p>
-
+            <h1>CSS Code for Flex-Flow Property</h1>
+           <pre>
+               <code>&lt;style&gt;
+                  .flex-container {
+                  display: flex;
+                  flex-flow: row wrap;
+                  background-color: DodgerBlue;
+                }
+                .flex-container > div {
+                  background-color: #f1f1f1;
+                  width: 100px;
+                  margin: 10px;
+                  text-align: center;
+                  line-height: 75px;
+                  font-size: 30px;
+                }
+                &lt;/style&gt;
+               </code>
+           </pre>
             <h3>Justify-Content</h3>
             <p>The justify-content property is a sub-property of the Flexible Box Layout module. It defines the alignment along the main axis. It helps distribute extra free space leftover when either all the flex items on a line are inflexible, or are flexible but have reached their maximum size.</p>
-
-            <h3>Align-Item</h3>
+            <h1>The justify-content Property</h1>
+            <p>The "justify-content: center;" aligns the flex items at the center of the container:</p>
+            <div class="flex-justify">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>  
+            </div>
+           <pre>
+               <code>&lt;style&gt;
+                     .flex-justify {
+                      display: flex;
+                      justify-content: center;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-justify > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
+            <h1>Align-Item Property</h1>
             <p>The align-items property defines the default behavior for how items are laid out along the cross axis (perpendicular to the main axis). Imagine a horizontal flexbox layout. That horizontal flow is the main axis, so align-items is the alignment opposite that, on the vertical axis</p>
-
-            <h3>Align-Content</h3>
+            <h1>The align-items Property</h1>
+            <p>The "align-items: center;" aligns the flex items in the middle of the container:</p>
+            <div class="align-item">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>  
+            </div>
+           <h1>CSS Code for Allign-Item Property</h1>
+             <pre>
+               <code>&lt;style&gt;
+                  .align-item {
+                   display: flex;
+                   height: 200px;
+                   align-items: center;
+                   background-color: DodgerBlue;
+                  }
+                .align-item > div {
+                  background-color: #f1f1f1;
+                  width: 100px;
+                  margin: 10px;
+                  text-align: center;
+                  line-height: 75px;
+                  font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
+            <h1>Align-Content</h1>
             <p>It defines how each line is aligned within a flexbox/grid container. It only applies if flex-wrap: wrap is present, and if there are multiple lines of flexbox/grid items. default align-content: stretch; Each line will stretch to fill the remaining space.</p>
-
+            <h1>The align-content Property</h1>
+            <p>The "align-content: space-between;" displays the flex lines with equal space between them:</p>
+        <h1>CSS Code for Align-Content Property</h1>
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
          </section>
+
+         <!-- Main Section for For Flex Child Element Properties-->
            <section class="main-section" id="Flexbox_Child_Element_Properies">
          	<header>FlexBox Child Element Properties</header>
-
-            <h3>Order</h3>
+        <h1>The order Property</h1>
             <p>The first flex item in the code does not have to appear as the first item in the layout. The order value must be a number, default value is 0.</p>
-
+            <h1>The order Property</h1>
+                <p>Use the order property to sort the flex items as you like:</p>
+                <div class="flex-container">
+                  <div style="order: 3">1</div>
+                  <div style="order: 2">2</div>
+                  <div style="order: 4">3</div> 
+                  <div style="order: 1">4</div>
+                </div>
+        <h1>CSS Code for The order Property</h1>
+           <pre>
+               <code>&lt;style&gt;
+                  .order-container {
+                  display: flex;
+                  align-items: stretch;
+                  background-color: #f1f1f1;
+                }
+                .order-container>div {
+                  background-color: DodgerBlue;
+                  color: white;
+                  width: 100px;
+                  margin: 10px;
+                  text-align: center;
+                  line-height: 75px;
+                  font-size: 30px;
+                }
+                    &lt;/style&gt;
+               </code>
+           </pre>
             <h3>Flex-grow</h3>
             <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+            <h1>The flex-grow Property</h1>
+            <p>Make the third flex item grow eight times faster than the other flex items:</p>
+            <div class="flex-glow-container">
+              <div style="flex-grow: 1">1</div>
+              <div style="flex-grow: 1">2</div>
+              <div style="flex-grow: 8">3</div>
+            </div>
 
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
             <h3>Flex-shrink</h3>
             <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
             <h3>Flex-basis</h3>
            <p>The flex-grow property is a sub-property of the Flexible Box Layout module. It defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
-
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
            <h3>Flex</h3>
          	<p>The flex property is a shorthand property for the flex-grow, flex-shrink, and flex-basis properties.</p>
-
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
             <h3>Align-self</h3>
             <p>The align-self CSS property overrides a grid or flex item's align-items value. In Grid, it aligns the item inside the grid area. In Flexbox, it aligns the item on the cross axis.</p>
-
+           <pre>
+               <code>&lt;style&gt;
+                    .flex-container {
+                      display: flex;
+                      flex-direction: column;
+                      background-color: DodgerBlue;
+                    }
+                    .flex-container > div {
+                      background-color: #f1f1f1;
+                      width: 100px;
+                      margin: 10px;
+                      text-align: center;
+                      line-height: 75px;
+                      font-size: 30px;
+                    }
+                    &lt;/style&gt;
+               </code>
+           </pre>
+        <!--Main Section for CSS Box Model-->
          </section>
            <section class="main-section" id="CSS_Box_Model">
          	<header>CSS Box Model</header>
@@ -142,6 +418,28 @@
             <p>Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS Box Model so that you can build more complex layout tasks with an understanding of how it works and the terminology that relates to it.</p>
             <h3>What is the CSS box model?</h3>
             <p>The full CSS box model applies to block boxes, inline boxes only use some of the behavior defined in the box model. The model defines how the different parts of a box — margin, border, padding, and content — work together to create a box that you can see on the page. To add some additional complexity, there is a standard and an alternate box model.</p>
+            <pre>
+             <code>
+                    &lt;!DOCTYPE html&gt;
+			        &lt;html&gt;
+			        &lt;head&gt;
+			        &lt;style&gt;
+			          div {
+					  background-color: lightgrey;
+					  width: 300px;
+					  border: 15px solid green;
+					  padding: 50px;
+					  margin: 20px;
+					  }
+				&lt;/style&gt;
+				&lt;/head&gt;
+				&lt;body&gt;
+				&lt;h2>Demonstrating the Box Model&gt;/h2&gt;
+
+				&lt;pThe CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.&gt;/p&gt;
+				&lt;/body&gt;
+			&lt;/html&gt;</code>
+					</pre>
 
                <ul>
                     <li>Margin Area: This area consists of space between border and margin. The dimensions of Margin area are the margin-box width and the margin-box height. It is useful to separate the element from its neighbors</li>
@@ -195,6 +493,7 @@
             You will encounter things like flex layout later in these lessons; the key thing to remember for now is that changing the value of the display property can change whether the outer display type of a box is block or inline, which changes the way it displays alongside other elements in the layout. <br><br>
         </p>
          </section>
+          <!--Main Section for HTML 5 Tags-->
            <section class="main-section" id="HTML_5_Tags">
          	<header>HTML 5 Tags</header>
             <h3>Html tags</h3>
